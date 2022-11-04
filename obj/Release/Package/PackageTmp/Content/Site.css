@@ -2,8 +2,9 @@
     /*padding-top: 50px;*/
     padding-bottom: 20px;
     /*background-image: url('Images/SVG/Artboard10.svg');*/
+    font-family: MetroDF;
 }
-}
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -24,6 +25,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
 
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -144,11 +146,14 @@ textarea {
     }
 }
 
-.centered {
-    position: fixed;
-}
+
 
 @font-face {
-    font-family: 'MetroDF';
+    font-family: MetroDF;
     src: url('../fonts/METRO-DF.TTF') format('truetype');
+}
+
+.centered {
+    position: fixed;
+    font-family: MetroDF !important
 }
