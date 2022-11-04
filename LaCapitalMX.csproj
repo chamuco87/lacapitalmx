@@ -145,6 +145,16 @@
     <Content Include="Content\Images\SVG\Artboard20.svg" />
     <Content Include="Content\Images\SVG\Artboard21.svg" />
     <Content Include="Content\Images\SVG\Artboard22.svg" />
+    <Content Include="Content\Images\SVG\Favicon.svg" />
+    <Content Include="Content\Images\SVG\Menu1.svg" />
+    <Content Include="Content\Images\SVG\Menu13.svg" />
+    <Content Include="Content\Images\SVG\Menu14.svg" />
+    <Content Include="Content\Images\SVG\Menu15.svg" />
+    <Content Include="Content\Images\SVG\Menu16.svg" />
+    <Content Include="Content\Images\SVG\Menu17.svg" />
+    <Content Include="Content\Images\SVG\Menu18.svg" />
+    <Content Include="Content\Images\SVG\Menu20.svg" />
+    <Content Include="Content\Images\SVG\Menu22.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

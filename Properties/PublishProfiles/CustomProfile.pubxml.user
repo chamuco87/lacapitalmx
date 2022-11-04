@@ -17,10 +17,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.dll">
-      <publishTime>11/04/2022 00:44:54</publishTime>
+      <publishTime>11/04/2022 01:05:33</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.pdb">
-      <publishTime>11/04/2022 00:44:54</publishTime>
+      <publishTime>11/04/2022 01:05:33</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 14:38:22</publishTime>
@@ -230,31 +230,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/04/2022 00:42:53</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard14.svg">
-      <publishTime>11/03/2022 19:09:26</publishTime>
+      <publishTime>11/04/2022 00:49:04</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard15.svg">
-      <publishTime>11/03/2022 19:12:29</publishTime>
+      <publishTime>11/04/2022 00:50:54</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard16-old.svg">
       <publishTime>11/03/2022 19:18:27</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard16.svg">
-      <publishTime>11/03/2022 19:42:30</publishTime>
+      <publishTime>11/04/2022 00:52:55</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard17.svg">
-      <publishTime>11/03/2022 19:22:35</publishTime>
+      <publishTime>11/04/2022 00:54:50</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard18.svg">
-      <publishTime>11/03/2022 19:29:55</publishTime>
+      <publishTime>11/04/2022 00:56:51</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard19.svg">
-      <publishTime>11/03/2022 19:34:43</publishTime>
+      <publishTime>11/04/2022 00:59:04</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard20.svg">
-      <publishTime>11/03/2022 19:51:49</publishTime>
+      <publishTime>11/04/2022 01:01:21</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard21.svg">
-      <publishTime>11/03/2022 19:56:54</publishTime>
+      <publishTime>11/04/2022 01:03:47</publishTime>
     </File>
     <File Include="Content/Images/SVG/Artboard22.svg">
       <publishTime>11/04/2022 00:27:17</publishTime>
