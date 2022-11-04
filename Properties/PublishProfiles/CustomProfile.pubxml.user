@@ -17,10 +17,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.dll">
-      <publishTime>11/03/2022 21:00:35</publishTime>
+      <publishTime>11/03/2022 21:05:09</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.pdb">
-      <publishTime>11/03/2022 21:00:35</publishTime>
+      <publishTime>11/03/2022 21:05:09</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 14:38:22</publishTime>
@@ -228,6 +228,36 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/Images/SVG/Artboard13.svg">
       <publishTime>11/03/2022 19:00:38</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard14.svg">
+      <publishTime>11/03/2022 19:09:26</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard15.svg">
+      <publishTime>11/03/2022 19:12:29</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard16-old.svg">
+      <publishTime>11/03/2022 19:18:27</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard16.svg">
+      <publishTime>11/03/2022 19:42:30</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard17.svg">
+      <publishTime>11/03/2022 19:22:35</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard18.svg">
+      <publishTime>11/03/2022 19:29:55</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard19.svg">
+      <publishTime>11/03/2022 19:34:43</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard20.svg">
+      <publishTime>11/03/2022 19:51:49</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard21.svg">
+      <publishTime>11/03/2022 19:56:54</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Artboard22.svg">
+      <publishTime>11/03/2022 20:16:58</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>11/03/2022 20:20:03</publishTime>
