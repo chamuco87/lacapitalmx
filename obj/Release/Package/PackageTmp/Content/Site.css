@@ -1,0 +1,149 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+    /*background-image: url('Images/SVG/Artboard10.svg');*/
+}
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    #main-img {
+        content: url("Images/SVG/Artboard12.svg");
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    #main-img {
+        content: url("Images/SVG/Artboard12.svg");
+    }
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+    #main-img {
+        content: url("Images/SVG/Artboard12.svg");
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) and (min-height: 650px) {
+    #main-img {
+        content: url("Images/SVG/Artboard17.svg");
+    }
+}
+
+@media screen and (max-width: 280px) and (orientation: portrait) and (min-height: 650px) {
+    #main-img {
+        content: url("Images/SVG/Artboard13.svg");
+    }
+}
+
+@media screen and (max-width: 415px) and (orientation: portrait) and (min-height: 600px) {
+    #main-img {
+        content: url("Images/SVG/Artboard19.svg");
+    }
+}
+@media screen and (max-width: 415px) and (orientation: portrait) and (min-height: 653px) {
+    #main-img {
+        content: url("Images/SVG/Artboard13.svg");
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) and (min-height: 650px) {
+    #main-img {
+        content: url("Images/SVG/Artboard13.svg");
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) and (min-height: 1000px) {
+    #main-img {
+        content: url("Images/SVG/Artboard14.svg");
+    }
+}
+@media screen and (min-width: 768px) and (orientation: portrait) and (min-height: 1300px) {
+    #main-img {
+        content: url("Images/SVG/Artboard16.svg");
+    }
+}
+
+@media (min-width: 992px) and (orientation: portrait) and (min-height: 650px) {
+    #main-img {
+        content: url("Images/SVG/Artboard13.svg");
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #main-img {
+        content: url("Images/SVG/Artboard1.svg");
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) and (min-height: 500px) {
+    #main-img {
+        content: url("Images/SVG/Artboard20.svg");
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    #main-img {
+        content: url("Images/SVG/Artboard1.svg");
+    }
+}
+
+@media (min-width: 992px) and (orientation: landscape) {
+    #main-img {
+        content: url("Images/SVG/Artboard1.svg");
+    }
+}
+
+@media (min-width: 992px) and (orientation: landscape) and (min-height: 600px) {
+    #main-img {
+        content: url("Images/SVG/Artboard18.svg");
+    }
+}
+
+@media (min-width: 992px) and (orientation: landscape) and (min-height: 750px) {
+    #main-img {
+        content: url("Images/SVG/Artboard15.svg");
+    }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    #main-img {
+        content: url("Images/SVG/Artboard1.svg");
+    }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) and (min-height: 600px) {
+    #main-img {
+        content: url("Images/SVG/Artboard18.svg");
+    }
+}
+
+@media (min-width: 1400px) {
+    #main-img {
+        content: url("Images/SVG/Artboard22.svg");
+    }
+}
+
+.centered {
+    position: fixed;
+}
