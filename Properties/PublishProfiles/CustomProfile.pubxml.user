@@ -17,10 +17,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 17:29:20</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.dll">
-      <publishTime>11/04/2022 01:05:33</publishTime>
+      <publishTime>11/04/2022 18:42:16</publishTime>
     </File>
     <File Include="bin/LaCapitalMX.pdb">
-      <publishTime>11/04/2022 01:05:33</publishTime>
+      <publishTime>11/04/2022 18:42:16</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 14:38:22</publishTime>
@@ -259,11 +259,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Images/SVG/Artboard22.svg">
       <publishTime>11/04/2022 00:27:17</publishTime>
     </File>
+    <File Include="Content/Images/SVG/Favicon.svg">
+      <publishTime>11/04/2022 10:07:32</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu1.svg">
+      <publishTime>11/04/2022 13:04:20</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu13.svg">
+      <publishTime>11/04/2022 14:27:07</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu14.svg">
+      <publishTime>11/04/2022 14:56:17</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu15.svg">
+      <publishTime>11/04/2022 18:30:30</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu16.svg">
+      <publishTime>11/04/2022 17:56:27</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu17.svg">
+      <publishTime>11/04/2022 18:09:01</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu18.svg">
+      <publishTime>11/04/2022 18:15:02</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu20.svg">
+      <publishTime>11/04/2022 18:35:31</publishTime>
+    </File>
+    <File Include="Content/Images/SVG/Menu22.svg">
+      <publishTime>11/04/2022 13:55:44</publishTime>
+    </File>
     <File Include="Content/Site.css">
-      <publishTime>11/03/2022 23:32:10</publishTime>
+      <publishTime>11/04/2022 14:46:41</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>11/02/2022 21:21:52</publishTime>
+      <publishTime>11/04/2022 10:10:44</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>11/02/2022 21:21:55</publishTime>
@@ -335,13 +365,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/02/2022 21:21:52</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/03/2022 15:31:31</publishTime>
+      <publishTime>11/04/2022 14:31:05</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/02/2022 21:21:52</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/04/2022 00:23:43</publishTime>
+      <publishTime>11/04/2022 13:57:23</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/02/2022 21:21:52</publishTime>

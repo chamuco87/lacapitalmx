@@ -25,11 +25,20 @@ textarea {
     max-width: 280px;
 }
 
-
+#main-img {
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
     #main-img {
         content: url("Images/SVG/Artboard12.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu12.svg");
     }
 }
 
@@ -37,11 +46,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard12.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu12.svg");
+    }
 }
 
 @media (min-width: 992px) and (orientation: portrait) {
     #main-img {
         content: url("Images/SVG/Artboard12.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu12.svg");
     }
 }
 
@@ -49,11 +64,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard17.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu17.svg");
+    }
 }
 
 @media screen and (max-width: 280px) and (orientation: portrait) and (min-height: 650px) {
     #main-img {
         content: url("Images/SVG/Artboard13.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu13.svg");
     }
 }
 
@@ -61,10 +82,16 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard19.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu19.svg");
+    }
 }
 @media screen and (max-width: 415px) and (orientation: portrait) and (min-height: 653px) {
     #main-img {
         content: url("Images/SVG/Artboard13.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu13.svg");
     }
 }
 
@@ -72,16 +99,25 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard13.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu13.svg");
+    }
 }
 
 @media screen and (min-width: 768px) and (orientation: portrait) and (min-height: 1000px) {
     #main-img {
         content: url("Images/SVG/Artboard14.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu14.svg");
+    }
 }
 @media screen and (min-width: 768px) and (orientation: portrait) and (min-height: 1300px) {
     #main-img {
         content: url("Images/SVG/Artboard16.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu16.svg");
     }
 }
 
@@ -89,11 +125,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard13.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu13.svg");
+    }
 }
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
     #main-img {
         content: url("Images/SVG/Artboard1.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu1.svg");
     }
 }
 
@@ -101,11 +143,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard20.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu20.svg");
+    }
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
     #main-img {
         content: url("Images/SVG/Artboard1.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu1.svg");
     }
 }
 
@@ -113,11 +161,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard1.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu1.svg");
+    }
 }
 
 @media (min-width: 992px) and (orientation: landscape) and (min-height: 600px) {
     #main-img {
         content: url("Images/SVG/Artboard18.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu18.svg");
     }
 }
 
@@ -125,11 +179,17 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard15.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu15.svg");
+    }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
     #main-img {
         content: url("Images/SVG/Artboard1.svg");
+    }
+    #menu-img {
+        content: url("Images/SVG/Menu1.svg");
     }
 }
 
@@ -137,14 +197,25 @@ textarea {
     #main-img {
         content: url("Images/SVG/Artboard18.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu18.svg");
+    }
+   
 }
 
 @media (min-width: 1400px) {
     #main-img {
         content: url("Images/SVG/Artboard22.svg");
     }
+    #menu-img {
+        content: url("Images/SVG/Menu22.svg");
+    }
 }
 
 .centered {
     position: fixed;
+}
+
+#menu-img {
+    margin-top:55px
 }
