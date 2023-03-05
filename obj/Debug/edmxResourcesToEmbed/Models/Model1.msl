@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A57E75_chamucolol87ModelStoreContainer" CdmEntityContainer="DB_A57E75_chamucolol87Entities">
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.Activity">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityHistories">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ActivityHistory">
+        <MappingFragment StoreEntitySet="ActivityHistory">
+          <ScalarProperty Name="ActivityHistoryId" ColumnName="ActivityHistoryId" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="ActivityDatetime" ColumnName="ActivityDatetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivitySteps">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ActivityStep">
+        <MappingFragment StoreEntitySet="ActivityStep">
+          <ScalarProperty Name="ActivityStepId" ColumnName="ActivityStepId" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ActivityStepName" ColumnName="ActivityStepName" />
+          <ScalarProperty Name="ActivityStepOrder" ColumnName="ActivityStepOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReasonActivities">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ReasonActivity">
+        <MappingFragment StoreEntitySet="ReasonActivity">
+          <ScalarProperty Name="ReasonActivityId" ColumnName="ReasonActivityId" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ActivityHistoryId" ColumnName="ActivityHistoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReasonSteps">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ReasonStep">
+        <MappingFragment StoreEntitySet="ReasonStep">
+          <ScalarProperty Name="ReasonStepId" ColumnName="ReasonStepId" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="StepHistoryId" ColumnName="StepHistoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepHistories">
+      <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.StepHistory">
+        <MappingFragment StoreEntitySet="StepHistory">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="StepHistoryId" ColumnName="StepHistoryId" />
+          <ScalarProperty Name="StepActivityId" ColumnName="StepActivityId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="StepDatetime" ColumnName="StepDatetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

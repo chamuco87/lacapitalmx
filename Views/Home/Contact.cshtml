@@ -1,17 +1,149 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+            * {box-sizing: border-box; font-family: sans-serif;}
+            body{ padding:15px; }
+            h2 {text-align:center;}
+            p { width:90%; }
+            input[type=text] {width: 100%; padding: 12px; border: 1px solid #ccc;border-radius: 4px; resize: vertical;font-size: 24px;text-align:center;}
+            label {padding: 12px 12px 5px 0; display: inline-block; }
+            input[type=submit] { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; float: right; width:50%;}
+            input[type=submit]:hover {background-color: #f0ad4e;}
+            input[type=reset] { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; float: right; width:50%;}
+            input[type=reset]:hover {background-color: #f0ad4e;}
+            .container { border-radius: 5px; background-color: #f2f2f2; padding: 20px;}
+            .col-100 {float: left; width: 100%; margin-top: 6px; }
+            .row:after {content: ""; display: table; clear: both; }
+            .valor {font-weight: bold;font-size: 20px; padding: 0px 12px 12px 0;}
+            @@media screen and (max-width: 600px) {.col-25, .col-75, input[type=submit] { width: 50%;}}
+            .col-50 {float: left; width: 50%; margin-top: 6px; }
+             imput [type = text]{padding:12px 20px; display: inline-block; border: 1px solid #ccc; box-sizing:border-boc;}             button{backgroung-color:#4CAF50; border:none; padding:12px 30px; text-decoration:none; margin: 4px 2px; cursor:pinter; }              canvas{pointer-events:none;}             .cap {background-color: #COCOCO; width:100%;align:center}             .cap span{text-align:center}
+            .error { width:100%; color: #FF0000; } </style>
+    <script type="text/javascript">
+function createCaptcha() {
+    document.getElementById('captcha').innerHTML = "";
+    var charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var lengthOtp = 6;
+    var captcha = [];
+    for (var i = 0; i < lengthOtp; i++) {
+        var index = Math.floor(Math.random() * charsArray.length + 1);
+        if (captcha.indexOf(charsArray[index]) == -1)
+            captcha.push(charsArray[index]);
+        else
+            i--;
+    }
+    var canv = document.createElement("canvas");
+    canv.id = "captcha";
+    canv.width = 250;
+    canv.height = 50;
+    var ctx = canv.getContext("2d");
+    ctx.font = "30px Comic Sans MS";
+    ctx.fillStyle = "red";
+    ctx.strokeText(captcha.join(""), 0, 30);
+    code = captcha.join("");
+    document.getElementById("captcha").appendChild(canv);
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+function validateCaptcha() {
+    event.preventDefault();
+    debugger
+    if (document.getElementById("captchaTextBox").value == code) {
+        document.getElementById('divError').innerHTML = "";
+    } else {
+        document.getElementById('divError').innerHTML = "Error en el captcha.<br>Intente de nuevo.";
+        createCaptcha();
+    }
+}
+function soloNumeros(e) {
+    var key = window.Event ? e.which : e.keyCode
+    if (!(key >= 48 && key <= 57))
+    {
+        alert("El FOLIO DE PERMISO debe ser numérico");
+        return false;
+    } else{
+        return (key >= 48 && key <= 57)
+    }
+}
+function validarform() {
+    var folio = document.getElementsByName("p")[0].value;
+    var vin = document.getElementsByName("v")[0].value;
+    var doc = document.getElementsByName("d")[0].value;
+    var capCAPTURADO = document.getElementById("captchaTextBox").value;
+    var capGENERADO = code;
+    if (folio == ""){
+        alert("El FOLIO DE PERMISO es requerido");
+        return false;
+    } else if ((vin == "")){
+        alert("El NÚMERO DE SERIE DEL VEHÍCULO O HIN DEL VEHÍCULO es requerido");
+        return false;
+    } else if ((doc == "")){
+        alert("El NÚMERO DE DOCUMENTO O DEL RFC es requerido");
+        return false;
+    } else if ((capCAPTURADO == "")) {
+        alert("El campo CAPTCHA es requerido");
+        return false;
+    } else if ((capCAPTURADO != code)) {
+        validateCaptcha();
+        return false;
+    } else if ((capCAPTURADO == code)) {
+        return true;
+    }
+}
+function validaLetrasNumeros(e)
+{
+    tecla = (document.all) ? e.keyCode : e.which;
+    if (tecla == 8){
+        return true;
+    }
+    patron = /^[A-Za-z0-9\\s]+$/g;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}     </script>
+</head>
+<body onload="createCaptcha();">
+    <h2>Valida tu permiso</h2>
+    <p>Por favor, captura los datos que se encuentran en tu Permiso de Importación</p>
+    <div class="container">
+        <form onSubmit="return validarform();" action="./res">
+            <div class="row">
+                <div class="col-100"><label for="fname">FOLIO DE PERMISO:</label></div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <input type="text" maxlength="9" onKeyPress="return soloNumeros(event)" name="p" placeholder="Folio permiso">
+                    <div class="row"><input type="hidden" name="c" value="0471BD33743EE41770214B091CB361AEE858E006D139319C"><input type="hidden" name="t" value="1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-100"><label>ÚLTIMOS 5 CARACTERES DEL NÚMERO DE SERIE DEL VEHÍCULO O HIN DEL VEHÍCULO:</label></div>
+                </div>
+                <div class="row">
+                    <div class="col-100"><input type="text" maxlength="5" onKeyPress="return validaLetrasNumeros(event)" name="v" placeholder="VIN/HIN"></div>
+                </div>
+                <div class="row">
+                    <div class="col-100"><label>ÚLTIMOS 5 CARACTERES DEL NÚMERO DE DOCUMENTO O DEL RFC:</label></div>
+                </div>
+                <div class="row">
+                    <div class="col-100">                         <input type="text" maxlength="5" onKeyPress="return validaLetrasNumeros(event)" name="d" placeholder="Número de documento o RFC">                    </div>
+                </div>
+                <br><br>
+                <div class="cap">
+                    <div align="center" id="captcha"></div>
+                    <input align="center" type="text" placeholder="Captcha" id="captchaTextBox" maxlength="6" />
+                    <div class="error" align="center" id="divError"></div>
+                </div>
+                <div class="row">
+                    <div class="col-100"><input type="submit" value="VALIDAR">                                           <input type="reset" value="LIMPIAR"></div>
+                </div>
+            </div>
+        </form>
+</body>
+</html>
+<script id="f5_cspm">
+(function(){var f5_cspm={f5_p:'DMJAPDEACPFIIHEFNBDPDHINELFDOFAOJKFKIKDDMBAJBMBMCAIJOBPAOGCHAMMNMKOBNCIDAAMLEPBMDPKAGFBDAAGMGHLIJCEACMJDFONGKONLMMEIHANLHJBHGNNN',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr2023293547aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>

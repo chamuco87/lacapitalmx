@@ -72,4 +72,7 @@ C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\Microsoft.CodeDom.Providers.D
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Debug\LaCapitalMX.csproj.CopyComplete
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Debug\LaCapitalMX.dll
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Debug\LaCapitalMX.pdb
-C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Debug\LaCapitalMX.csprojAssemblyReference.cache
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.dll
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.SqlServer.dll
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.xml
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.SqlServer.xml

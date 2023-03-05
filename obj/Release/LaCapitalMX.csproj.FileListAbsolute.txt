@@ -73,3 +73,7 @@ C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Release\LaCapitalMX.csprojAss
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Release\LaCapitalMX.csproj.CopyComplete
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Release\LaCapitalMX.dll
 C:\Users\Chamucolol87\source\repos\LaCapitalMX\obj\Release\LaCapitalMX.pdb
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.dll
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.SqlServer.dll
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.xml
+C:\Users\Chamucolol87\source\repos\LaCapitalMX\bin\EntityFramework.SqlServer.xml

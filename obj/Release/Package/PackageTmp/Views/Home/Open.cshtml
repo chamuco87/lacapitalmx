@@ -1,0 +1,29 @@
+﻿@using LaCapitalMX.Models;
+@model ActivityStep
+
+@{
+    ViewBag.Title = "Menu ~ La Capital-MX";
+}
+
+    <div class="jumbotron">
+        <div id="container">
+            @if (Model.ActivityStepName == "none")
+            {
+
+                <h1>Estas apunto de abrir La Capital-MX</h1>
+                <p class="lead">Para considerar abierto se necesitan los siguientes pasos.</p>
+
+                <label>Preciona el boton para comezar la apertura</label><br />
+                <button id="startBtn">Start</button>
+            
+        }
+        else
+        {
+
+            @Html.Action("StartExistingOpening", "Home");
+
+        }
+        </div>
+    </div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/site")

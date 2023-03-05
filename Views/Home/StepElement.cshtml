@@ -1,0 +1,10 @@
+﻿@using LaCapitalMX.Models;
+@model ActivityStep
+
+<h1>Estas en el proceso de apertura</h1>
+<p class="lead">Proceso empezo a las <label>@Model.StepHistories.FirstOrDefault().StepDatetime</label></p>
+<br />
+<p class="lead">Completa el paso de <label>@Model.ActivityStepName</label></p>
+<br />
+<label id="step" style="display:none">@Model.ActivityStepId</label>
+@Html.Action("GetStatuses", "Home");

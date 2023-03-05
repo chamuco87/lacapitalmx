@@ -1,0 +1,11 @@
+﻿@using LaCapitalMX.Models;
+@model List<string>
+
+@foreach (var statu in Model)
+{ 
+    <button id="action" class="@statu">@statu</button>
+}
+
+<script type="text/javascript">
+             bindAction();
+</script>

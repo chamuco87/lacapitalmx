@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A57E75_chamucolol87Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ActivityHistories" Relationship="Self.FK__ActivityH__Activ__351DDF8C" FromRole="Activity" ToRole="ActivityHistory" />
+    <NavigationProperty Name="ActivitySteps" Relationship="Self.FK__ActivityS__Activ__314D4EA8" FromRole="Activity" ToRole="ActivityStep" />
+    <NavigationProperty Name="StepHistories" Relationship="DB_A57E75_chamucolol87Model.FK__StepHisto__Activ__4924D839" FromRole="Activity" ToRole="StepHistory" />
+  </EntityType>
+  <EntityType Name="ActivityHistory">
+    <Key>
+      <PropertyRef Name="ActivityHistoryId" />
+    </Key>
+    <Property Name="ActivityHistoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="Int64" Nullable="false" />
+    <Property Name="StatusId" Type="Int64" Nullable="false" />
+    <Property Name="ActivityDatetime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Activity" Relationship="Self.FK__ActivityH__Activ__351DDF8C" FromRole="ActivityHistory" ToRole="Activity" />
+    <NavigationProperty Name="Status" Relationship="Self.FK__ActivityH__Statu__361203C5" FromRole="ActivityHistory" ToRole="Status" />
+    <NavigationProperty Name="ReasonActivities" Relationship="Self.FK__ReasonAct__Activ__38EE7070" FromRole="ActivityHistory" ToRole="ReasonActivity" />
+  </EntityType>
+  <EntityType Name="ActivityStep">
+    <Key>
+      <PropertyRef Name="ActivityStepId" />
+    </Key>
+    <Property Name="ActivityStepId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="Int64" Nullable="false" />
+    <Property Name="ActivityStepName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityStepOrder" Type="Int32" />
+    <NavigationProperty Name="Activity" Relationship="Self.FK__ActivityS__Activ__314D4EA8" FromRole="ActivityStep" ToRole="Activity" />
+    <NavigationProperty Name="StepHistories" Relationship="Self.FK__StepHisto__StepA__324172E1" FromRole="ActivityStep" ToRole="StepHistory" />
+  </EntityType>
+  <EntityType Name="ReasonActivity">
+    <Key>
+      <PropertyRef Name="ReasonActivityId" />
+    </Key>
+    <Property Name="ReasonActivityId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ActivityHistoryId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="ActivityHistory" Relationship="Self.FK__ReasonAct__Activ__38EE7070" FromRole="ReasonActivity" ToRole="ActivityHistory" />
+  </EntityType>
+  <EntityType Name="ReasonStep">
+    <Key>
+      <PropertyRef Name="ReasonStepId" />
+    </Key>
+    <Property Name="ReasonStepId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StepHistoryId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="StepHistory" Relationship="Self.FK__ReasonSte__StepH__3BCADD1B" FromRole="ReasonStep" ToRole="StepHistory" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ActivityHistories" Relationship="Self.FK__ActivityH__Statu__361203C5" FromRole="Status" ToRole="ActivityHistory" />
+    <NavigationProperty Name="StepHistories" Relationship="Self.FK__StepHisto__Statu__29AC2CE0" FromRole="Status" ToRole="StepHistory" />
+    <NavigationProperty Name="StepHistories1" Relationship="Self.FK__StepHisto__Statu__2D7CBDC4" FromRole="Status" ToRole="StepHistory" />
+  </EntityType>
+  <EntityType Name="StepHistory">
+    <Key>
+      <PropertyRef Name="StepHistoryId" />
+    </Key>
+    <Property Name="StepHistoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StepActivityId" Type="Int64" Nullable="false" />
+    <Property Name="StatusId" Type="Int64" Nullable="false" />
+    <Property Name="StepDatetime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ActivityStep" Relationship="Self.FK__StepHisto__StepA__324172E1" FromRole="StepHistory" ToRole="ActivityStep" />
+    <NavigationProperty Name="ReasonSteps" Relationship="Self.FK__ReasonSte__StepH__3BCADD1B" FromRole="StepHistory" ToRole="ReasonStep" />
+    <NavigationProperty Name="Status" Relationship="Self.FK__StepHisto__Statu__29AC2CE0" FromRole="StepHistory" ToRole="Status" />
+    <NavigationProperty Name="Status1" Relationship="Self.FK__StepHisto__Statu__2D7CBDC4" FromRole="StepHistory" ToRole="Status" />
+    <Property Name="ActivityId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Activity" Relationship="DB_A57E75_chamucolol87Model.FK__StepHisto__Activ__4924D839" FromRole="StepHistory" ToRole="Activity" />
+  </EntityType>
+  <Association Name="FK__ActivityH__Activ__351DDF8C">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1" />
+    <End Role="ActivityHistory" Type="Self.ActivityHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="ActivityHistory">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ActivityS__Activ__314D4EA8">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ActivityStep" Type="Self.ActivityStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="ActivityStep">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ActivityH__Statu__361203C5">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="ActivityHistory" Type="Self.ActivityHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="ActivityHistory">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ReasonAct__Activ__38EE7070">
+    <End Role="ActivityHistory" Type="Self.ActivityHistory" Multiplicity="1" />
+    <End Role="ReasonActivity" Type="Self.ReasonActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityHistory">
+        <PropertyRef Name="ActivityHistoryId" />
+      </Principal>
+      <Dependent Role="ReasonActivity">
+        <PropertyRef Name="ActivityHistoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StepHisto__StepA__324172E1">
+    <End Role="ActivityStep" Type="Self.ActivityStep" Multiplicity="1" />
+    <End Role="StepHistory" Type="Self.StepHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityStep">
+        <PropertyRef Name="ActivityStepId" />
+      </Principal>
+      <Dependent Role="StepHistory">
+        <PropertyRef Name="StepActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ReasonSte__StepH__3BCADD1B">
+    <End Role="StepHistory" Type="Self.StepHistory" Multiplicity="1" />
+    <End Role="ReasonStep" Type="Self.ReasonStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StepHistory">
+        <PropertyRef Name="StepHistoryId" />
+      </Principal>
+      <Dependent Role="ReasonStep">
+        <PropertyRef Name="StepHistoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StepHisto__Statu__29AC2CE0">
+    <End Role="Status" Type="Self.Status" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StepHistory" Type="Self.StepHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="StepHistory">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StepHisto__Statu__2D7CBDC4">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="StepHistory" Type="Self.StepHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="StepHistory">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A57E75_chamucolol87Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activities" EntityType="Self.Activity" />
+    <EntitySet Name="ActivityHistories" EntityType="Self.ActivityHistory" />
+    <EntitySet Name="ActivitySteps" EntityType="Self.ActivityStep" />
+    <EntitySet Name="ReasonActivities" EntityType="Self.ReasonActivity" />
+    <EntitySet Name="ReasonSteps" EntityType="Self.ReasonStep" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="StepHistories" EntityType="Self.StepHistory" />
+    <AssociationSet Name="FK__ActivityH__Activ__351DDF8C" Association="Self.FK__ActivityH__Activ__351DDF8C">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="ActivityHistory" EntitySet="ActivityHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ActivityS__Activ__314D4EA8" Association="Self.FK__ActivityS__Activ__314D4EA8">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="ActivityStep" EntitySet="ActivitySteps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ActivityH__Statu__361203C5" Association="Self.FK__ActivityH__Statu__361203C5">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ActivityHistory" EntitySet="ActivityHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ReasonAct__Activ__38EE7070" Association="Self.FK__ReasonAct__Activ__38EE7070">
+      <End Role="ActivityHistory" EntitySet="ActivityHistories" />
+      <End Role="ReasonActivity" EntitySet="ReasonActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StepHisto__StepA__324172E1" Association="Self.FK__StepHisto__StepA__324172E1">
+      <End Role="ActivityStep" EntitySet="ActivitySteps" />
+      <End Role="StepHistory" EntitySet="StepHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ReasonSte__StepH__3BCADD1B" Association="Self.FK__ReasonSte__StepH__3BCADD1B">
+      <End Role="StepHistory" EntitySet="StepHistories" />
+      <End Role="ReasonStep" EntitySet="ReasonSteps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StepHisto__Statu__29AC2CE0" Association="Self.FK__StepHisto__Statu__29AC2CE0">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="StepHistory" EntitySet="StepHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StepHisto__Statu__2D7CBDC4" Association="Self.FK__StepHisto__Statu__2D7CBDC4">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="StepHistory" EntitySet="StepHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StepHisto__Activ__4924D839" Association="DB_A57E75_chamucolol87Model.FK__StepHisto__Activ__4924D839">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="StepHistory" EntitySet="StepHistories" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK__StepHisto__Activ__4924D839">
+    <End Type="DB_A57E75_chamucolol87Model.Activity" Role="Activity" Multiplicity="1" />
+    <End Type="DB_A57E75_chamucolol87Model.StepHistory" Role="StepHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="StepHistory">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
